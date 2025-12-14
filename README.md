@@ -141,7 +141,7 @@ MIT License
 
 ## Author
 
-Houdaifa Hamouchi
+Houdaifa H.
 
 ---
 
