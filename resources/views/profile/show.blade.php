@@ -4,11 +4,6 @@
     </x-slot:heading>
 
 
-    <div class="container mx-auto py-6">
-        <h1 class="text-3xl font-bold">Over Ons</h1>
-        <script src="https://cdn.tailwindcss.com"></script>
-
-    </div>
 
 
 

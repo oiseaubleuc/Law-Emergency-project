@@ -12,11 +12,11 @@ class NewsController extends Controller
     {
         if (auth()->check()) {
             $userArticles = News::where('user_id', auth()->id())->with('user')->get();
+            $otherArticles = News::where('user_id', '!=', auth()->id())->with('user')->paginate(10);
         } else {
             $userArticles = collect();
+            $otherArticles = News::with('user')->paginate(10);
         }
-
-        $otherArticles = News::where('user_id', '!=', auth()->id())->with('user')->paginate(10);
 
         return view('news', compact('userArticles', 'otherArticles'));
     }
@@ -27,13 +27,6 @@ class NewsController extends Controller
         return view('create');
     }
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
-
-
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -43,7 +36,7 @@ class NewsController extends Controller
         ]);
 
         $validatedData['user_id'] = auth()->id();
-        echo $request;
+        
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('images', 'public');
             $validatedData['image_file'] = $imagePath;

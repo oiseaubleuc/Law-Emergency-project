@@ -21,6 +21,7 @@ class Job extends Model {
         'email',
         'beschrijving',
         'bijlage',
+        'type',
     ];
 
 

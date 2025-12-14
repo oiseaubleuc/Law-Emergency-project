@@ -82,10 +82,10 @@
                 <h2 class="text-xl font-semibold cursor-pointer">Hoe helpt uw juridische wachtpost bij het verminderen van stress tijdens noodsituaties?</h2>
                 <p class="text-gray-600 ">We helpen bij het verminderen van stress door een helder en gestructureerd proces te bieden waarmee je gemakkelijk door je situatie kunt navigeren. Door snelle antwoorden en adviserende begeleiding te bieden, ontlasten we je van de juridische complexiteit en zorgen we ervoor dat je je kunt concentreren op het herstellen van de situatie zonder extra stress.</p>
             </div>
+
         </div>
     </div>
 
-    @vite('resources/js/app.js')
 
 </x-layout>
 

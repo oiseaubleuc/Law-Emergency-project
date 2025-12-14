@@ -10,9 +10,10 @@ class News extends Model
 use HasFactory;
 
 protected $fillable = [
-'title',
-'image_file',
-'content',
+    'title',
+    'image_file',
+    'content',
+    'user_id',
 ];
     public function user()
     {

@@ -39,7 +39,25 @@ class SessionController extends Controller
     {
         Auth::logout();
 
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+
         return redirect('/');
+    }
+
+    public function index()
+    {
+        return redirect()->route('admin.dashboard');
+    }
+
+    public function dashboard()
+    {
+        $jobsCount = \App\Models\Job::count();
+        $newsCount = \App\Models\News::count();
+        $messagesCount = \App\Models\ContactMessage::count();
+        $usersCount = \App\Models\User::count();
+
+        return view('admin.dashboard', compact('jobsCount', 'newsCount', 'messagesCount', 'usersCount'));
     }
 }
 
