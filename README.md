@@ -1,66 +1,148 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Law Emergency - 24/7 Legal Assistance Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**A professional web application for a law firm providing 24/7 legal assistance services**
 
-## About Laravel
+## Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Law Emergency is a full-featured web application built with Laravel 11, designed for a prestigious law firm to provide round-the-clock legal assistance to clients. The platform offers a modern, professional interface with multilingual support and comprehensive case management capabilities.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Key Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Public Features
+- **Multilingual Support**: Full internationalization with support for English, French, and Dutch (EN/FR/NL)
+- **Legal Area Pages**: Dedicated pages for different legal specialties:
+  - Strafrecht (Criminal Law)
+  - Verkeersrecht (Traffic Law)
+  - Familierecht (Family Law)
+- **News/Blog System**: Public news articles with image support
+- **Contact Form**: Secure contact form with database storage
+- **Case Submission**: Public case submission system (no authentication required)
+- **Responsive Design**: Mobile-first, responsive design with professional styling
 
-## Learning Laravel
+### User Features (Authenticated)
+- **User Authentication**: Secure login/registration system
+- **Profile Management**: User profile creation and editing
+- **Case Management (Jobs)**: Full CRUD operations for legal cases:
+  - Create, read, update, and delete cases
+  - File upload support
+  - PDF generation for case documents
+  - Case type classification
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Admin Features
+- **Admin Dashboard**: Dedicated admin panel with statistics
+- **News Management**: Create, edit, and delete news articles
+- **User Management**: Admin access to user data
+- **Content Moderation**: Full control over website content
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Technical Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Backend
+- **Framework**: Laravel 11.9
+- **PHP**: 8.2+
+- **Database**: MySQL/SQLite (configurable)
+- **PDF Generation**: barryvdh/laravel-dompdf
+- **Authentication**: Laravel's built-in authentication system
 
-## Laravel Sponsors
+### Frontend
+- **CSS Framework**: Tailwind CSS 4.1
+- **JavaScript**: Alpine.js 3.x
+- **Build Tool**: Vite 5.0
+- **Typography**: Cormorant Garamond & Playfair Display (premium serif fonts)
+- **Design**: Professional color palette (Navy Blue #0a1929 & Elegant Gold #c9a961)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Additional Technologies
+- **PostCSS** & **Autoprefixer** for CSS processing
+- **Axios** for HTTP requests
+- **Bootstrap 5.3** (optional components)
 
-### Premium Partners
+## Design Philosophy
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+The application features a premium, professional design specifically tailored for a prestigious law firm:
+- **Color Scheme**: Deep navy blue (#0a1929) as primary color representing trust and professionalism, paired with elegant gold (#c9a961) accents for prestige
+- **Typography**: Elegant serif fonts (Cormorant Garamond, Playfair Display) for a sophisticated, legal industry-appropriate appearance
+- **UI/UX**: Modern card-based layouts, smooth animations, and intuitive navigation
+- **Accessibility**: ARIA labels, semantic HTML, and keyboard navigation support
 
-## Contributing
+## Security Features
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **CSRF Protection**: Laravel's built-in CSRF token validation
+- **XSS Protection**: Automatic output escaping in Blade templates
+- **Authentication Middleware**: Secure route protection
+- **Admin Middleware**: Role-based access control
+- **Input Validation**: Server-side validation for all forms
+- **File Upload Security**: Secure file handling and storage
 
-## Code of Conduct
+## Project Structure
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+├── app/
+│   ├── Http/Controllers/    # Application controllers
+│   │   ├── ContactController.php
+│   │   ├── JobController.php
+│   │   ├── NewsController.php
+│   │   ├── LanguageController.php
+│   │   └── ...
+│   ├── Models/              # Eloquent models
+│   │   ├── Job.php
+│   │   ├── News.php
+│   │   ├── ContactMessage.php
+│   │   └── User.php
+│   └── Http/Middleware/     # Custom middleware
+├── resources/
+│   ├── views/              # Blade templates
+│   ├── lang/               # Localization files (en, fr, nl)
+│   ├── css/                # Custom CSS
+│   └── js/                 # JavaScript files
+├── routes/
+│   └── web.php             # Application routes
+└── public/                  # Public assets
+```
 
-## Security Vulnerabilities
+## Localization
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The application supports three languages:
+- **English (en)**: Default language
+- **French (fr)**: Full translation
+- **Dutch (nl)**: Full translation
+
+Language files are located in `resources/lang/{locale}/messages.php`
+
+## Features in Detail
+
+### Case Management System
+- Users can submit legal cases with detailed information
+- File attachments supported
+- PDF generation for case documentation
+- Case categorization by type
+- Full CRUD operations for authenticated users
+
+### News System
+- Public news articles with rich content
+- Image support with proper display
+- Admin-controlled content management
+- SEO-friendly URLs
+
+### Contact System
+- Secure contact form
+- Database storage of messages
+- Email notifications (configurable)
+- Form validation and error handling
+
+## Development
+
+- **Laravel Version**: 11.9
+- **PHP Version**: 8.2+
+- **Node Version**: 20.19+ or 22.12+ (for Vite)
+- **Testing**: Pest PHP (configured)
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+MIT License
+
+## Author
+
+Houdaifa Hamouchi
+
+---
+
+**Note**: This is a professional web application designed for a law firm, featuring modern web development practices, security best practices, and a premium user experience suitable for a prestigious legal services provider.
