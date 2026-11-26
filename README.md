@@ -1,6 +1,18 @@
-# Law Emergency - 24/7 Legal Assistance Platform
+<h1 align="center">Law Emergency</h1>
+<p align="center">
+  <b>24/7 legal assistance platform for a law firm</b><br/>
+  Trilingual (EN / FR / NL) web application with legal area pages, online case submission, case management with PDF export, news and an admin area.
+</p>
 
-**A professional web application for a law firm providing 24/7 legal assistance services**
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-11-FF2D20?style=flat-square&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=flat-square&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/Blade-templates-F05340?style=flat-square" />
+  <img src="https://img.shields.io/badge/i18n-EN%20%7C%20FR%20%7C%20NL-555?style=flat-square" />
+  <img src="https://img.shields.io/badge/PDF-DomPDF-B30B00?style=flat-square" />
+</p>
+
+---
 
 ## Overview
 
@@ -146,3 +158,7 @@ Houdaifa H.
 ---
 
 **Note**: This is a professional web application designed for a law firm, featuring modern web development practices, security best practices, and a premium user experience suitable for a prestigious legal services provider.
+
+---
+
+<p align="center">Built by <a href="https://github.com/oiseaubleuc">Hoho</a> · Belgium</p>
